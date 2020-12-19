@@ -1,3 +1,90 @@
 .carditem {
+    width: 100%;
+    padding: 20px;
+}
 
+.carditem {
+    /* Structure */
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.carditem::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.carditem {
+    font-family: inherit;
+    font-size: 100%;
+    color: rgba(255, 255, 255, 1); /* rgba supported */
+    background-color: #252525;
+    text-decoration: none;
+    /*border-radius: 25px;*/
+    padding: 10px;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s ease-in-out;
+}
+
+.carditem-hover, .carditem:hover, .carditem:focus {
+    background-color: #333333;
+}
+
+.carditem:focus {
+    outline: 0;
+}
+
+.abbbtn__wrap {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carditem__title {
+    flex: 1;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carditem__icon {
+    margin: 5px;
+    color: lightgray;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.carditem:hover .carditem__icon {
+    opacity: 1;
+}
+
+.carditem:hover .carditem__icon:hover {
+    transform: rotate(180deg);
+}
+
+.carditem.carditem__active {
+    background-color: #FDD657;
+    color: black;
+}
+
+.carditem__active .carditem__icon {
+    opacity: 1;
+    color: gray;
+}
+
+.carditem.carditem__active:hover {
+    background-color: #FDD657;
 }

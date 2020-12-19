@@ -2,11 +2,15 @@ import React from 'react';
 import styles from './styles.module.css';
 import CardList from '../containers/CardList';
 import Card from '../components/Card';
+import AddButton from '../containers/AddButton';
 
 function App() {
   return (
     <div className={styles.app}>
-      <CardList />
+      <div className={styles.app__column}>
+        <AddButton />
+        <CardList />
+      </div>
       <Card />
     </div>
   );
