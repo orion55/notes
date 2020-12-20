@@ -1,0 +1,202 @@
+.modal__close_icon {
+    position: absolute;
+    right: 0;
+    top: -17px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    user-select: none;
+    box-sizing: border-box;
+    transition: all 0.4s ease-out;
+}
+
+.modal__close_icon:hover {
+    transform: rotate(180deg);
+}
+
+.modal__icon {
+    color: white;
+}
+
+.modal__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    z-Index: 200;
+}
+
+.modal__main {
+    position: absolute;
+    padding: 30px;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 47px;
+    overflow: visible;
+    outline: none;
+    max-height: calc(84vh - 60px);
+}
+
+.contentModal {
+    min-width: 30vw;
+    max-width: calc(90vw - 60px);
+    min-height: 20vh;
+    max-height: calc(90vh - 60px);
+    text-align: center;
+}
+
+.contentModal__container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /*min-height: 240px;*/
+    max-height: 100%;
+}
+
+.contentModal__title {
+    padding-bottom: 2.2vh;
+    font-size: 1.563rem;
+    font-weight: 700;
+}
+
+.contentModal__text {
+    /*padding-bottom: 2.5vh;*/
+    font-size: 0.938rem;
+}
+
+.contentModal__content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-height: 100%;
+}
+
+.contentModal__content img {
+    max-width: 100%;
+    max-height: 46vh;
+}
+
+.contentModal__btn {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentModal__button {
+    /* Structure */
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.contentModal__button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.contentModal__button {
+    font-family: inherit;
+    font-size: 100%;
+    color: rgba(255, 255, 255, 1); /* rgba supported */
+    background-color: #00A82D;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentModal__button__red {
+    background-color: red;
+    margin-right: 10px;
+}
+
+.contentModal__button-hover, .contentModal__button:hover, .contentModal__button:focus {
+    filter: alpha(opacity=90);
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.10));
+}
+
+.contentModal__button:focus {
+    outline: 0;
+}
+
+.contentModal__button__icon {
+    margin: 5px;
+}
+
+.contentModal__button__text {
+    flex: 1;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .modal__close_icon {
+        top: -30px;
+    }
+
+    .contentModal__container {
+        min-width: 60vw;
+    }
+
+    .contentModal__title {
+        font-size: 1.163rem;
+        padding-bottom: 1.6vh;
+    }
+
+    .contentModal__text {
+        font-size: 1.038rem;
+        padding-bottom: 1.6vh;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .modal__main {
+        padding: 20px;
+    }
+
+    .modal__close_icon {
+        top: -30px;
+    }
+
+    .contentModal {
+        width: 100vw;
+        max-width: calc(96vw - 32px);
+        max-height: calc(86vh - 32px);
+        padding: 16px;
+    }
+
+    .contentModal__title {
+        font-size: 1.163rem;
+        padding-bottom: 1.6vh;
+    }
+
+    .contentModal__text {
+        font-size: 1.038rem;
+        padding-bottom: 1.6vh;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .contentModal__content img {
+        max-height: 34vh;
+    }
+}

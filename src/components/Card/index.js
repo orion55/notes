@@ -52,13 +52,13 @@ function Card() {
             value={title}
             onChange={handleTitleChange}
             className={styles.card__title}
-            placeholder="Название"
+            placeholder="Title"
           />
           <textarea
             value={desc}
             onChange={handleDescChange}
             className={styles.card__desc}
-            placeholder="Наберите текст"
+            placeholder="Type the text"
           />
         </>
       )}

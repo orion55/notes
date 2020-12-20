@@ -36,5 +36,6 @@ module.exports = {
     'import/no-named-as-default': 'off',
     camelcase: 'off',
     'no-nested-ternary': 'off',
+    'no-debugger': 'off',
   },
 };
