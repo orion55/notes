@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import uniqueId from 'lodash/uniqueId';
-import { generateItems } from '../libs/misc';
 import { setItem } from './curItemSlice';
 
 export const itemsSlice = createSlice({

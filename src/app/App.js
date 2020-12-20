@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import CardList from '../containers/CardList';
-import Card from '../components/Card';
+import Card from '../containers/Card';
 import AddButton from '../containers/AddButton';
 
 function App() {
